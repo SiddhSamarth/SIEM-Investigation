@@ -1,14 +1,15 @@
 # Cloud SIEM Incident Investigation: Solorigate Supply-Chain Backdoor Triage
 
-An operational cloud security investigation using Microsoft Sentinel (Azure Sentinel), the Advanced Security Information Model (ASIM), and Kusto Query Language (KQL) to triage a Solorigate (SolarWinds) supply-chain backdoor incident, hunt for compromised endpoints, and enrich enterprise threat intelligence.
+An incident triage walkthrough using Microsoft Sentinel (Azure Sentinel), the Advanced Security Information Model (ASIM), and Kusto Query Language (KQL) to investigate a simulated Solorigate (SUNBURST) supply-chain backdoor beacon.
 
 ---
 
-## Overview
+## Scope & Lab Environment
 
-In late 2020, threat actor UNC2452 (NOBELIUM) executed a sophisticated supply-chain attack compromising SolarWinds Orion software builds, inserting the backdoor known as Solorigate (SUNBURST). The backdoor communicated with command-and-control (C2) infrastructure primarily disguised beneath domains such as `avsvmcloud.com`.
-
-This repository documents an operational, end-to-end incident investigation within **Microsoft Sentinel (Azure Sentinel)**. The walkthrough covers alert ingestion from Cisco Umbrella DNS via ASIM, log correlation in Azure Log Analytics, proactive threat hunting with KQL to identify lateral movement across internal hosts, incident bookmarking, IOC injection into Sentinel's Threat Intelligence store, and forensic handover documentation.
+* **Lab Scenario:** Solorigate supply-chain backdoor triage and endpoint hunting.
+* **Platform:** Microsoft Sentinel on Azure Log Analytics.
+* **Data Sources:** Cisco Umbrella DNS normalized through ASIM (`_Im_Dns`), Windows endpoint events (`DeviceFileEvents`).
+* **Exercise Provenance:** This repository documents a hands-on cloud SIEM incident triage exercise. The scenario structure, visual walkthrough material, and attack timeline are adapted from lab coursework by Larry ([@laaaaaarry](https://github.com/laaaaaarry/SIEM-Investigation)). The extracted KQL queries, technical analysis, and incident handling notes are documented below.
 
 ---
 
