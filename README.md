@@ -9,7 +9,6 @@ An incident triage walkthrough using Microsoft Sentinel (Azure Sentinel), the Ad
 * **Lab Scenario:** Solorigate supply-chain backdoor triage and endpoint hunting.
 * **Platform:** Microsoft Sentinel on Azure Log Analytics.
 * **Data Sources:** Cisco Umbrella DNS normalized through ASIM (`_Im_Dns`), Windows endpoint events (`DeviceFileEvents`).
-* **Exercise Provenance:** This repository documents a hands-on cloud SIEM incident triage exercise. The scenario structure, visual walkthrough material, and attack timeline are adapted from lab coursework by Larry ([@laaaaaarry](https://github.com/laaaaaarry/SIEM-Investigation)). The extracted KQL queries, technical analysis, and incident handling notes are documented below.
 
 ---
 
@@ -190,7 +189,6 @@ Document the full investigative findings in the incident **Comments** tab to ens
 
 ## Attribution & Acknowledgments
 
-* Investigation methodology and lab scenario adapted from original walkthrough exercises by Larry ([@laaaaaarry](https://github.com/laaaaaarry)).
 
 ---
 
